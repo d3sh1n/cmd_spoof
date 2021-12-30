@@ -1,12 +1,4 @@
-/*
 
- Red Team Operator course code template
- Cmdline args spoofing
- 
- author: reenz0h (twitter: @SEKTOR7net)
- credits: Adam Chester
-
-*/
 
 #include <iostream>
 #include <Windows.h>
@@ -46,7 +38,7 @@ DWORD GetPidByName(const char* pName) {
 	HANDLE snapshot;
 
 	pEntry.dwSize = sizeof(PROCESSENTRY32);
-	snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0); //»ñÈ¡½ø³Ì¿ìÕÕ
+	snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0); //Â»Ã±ÃˆÂ¡Â½Ã¸Â³ÃŒÂ¿Ã¬Ã•Ã•
 
 	if (Process32First(snapshot, &pEntry) == TRUE) { //get first Handle
 		while (Process32Next(snapshot, &pEntry) == TRUE) { //Get second Handle
